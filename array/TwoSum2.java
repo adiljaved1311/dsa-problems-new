@@ -13,8 +13,8 @@ package array;
 
 public class TwoSum2 {
 	public static void main(String[] args) {
-		int a[] = {2,7,11,15};
-		int b[] = twoSum2(a,9);
+		int a[] = {1,3,5,7,11,13,20,35};
+		int b[] = twoSum2(a,20);
 		for(int x:b)
 			System.out.print(x+", ");
 	}
