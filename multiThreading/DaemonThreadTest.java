@@ -5,7 +5,9 @@ public class DaemonThreadTest {
         DaemonThread dt = new DaemonThread();
         dt.setDaemon(true);
         dt.start();
-        System.out.println(dt.isDaemon());
+        for(int i = 1; i <= 1000; i++){
+            System.out.println(i);
+        }
     }
 }
 
