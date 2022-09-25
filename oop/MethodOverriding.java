@@ -1,5 +1,7 @@
 package oop;
 
+import java.io.IOException;
+
 class Parent{
 	public void print() {
 		System.out.println("I am Parent class Method");
