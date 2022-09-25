@@ -9,6 +9,7 @@ public class SearchRotatedShiftedArray {
 
     public static int searchRotatedShiftedArray(int[] nums, int target){
         int firstElementIndex = firstElement(nums);
+        System.out.println("Minumum -> "+nums[firstElementIndex]);
         if(target == nums[firstElementIndex]){
             return firstElementIndex;
         }else if(target < nums[0]){ // number should be in right

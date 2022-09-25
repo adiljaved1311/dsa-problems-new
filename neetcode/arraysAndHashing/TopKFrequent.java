@@ -6,10 +6,10 @@ import java.util.Map;
 
 public class TopKFrequent {
     public static void main(String[] args) {
-        int[] nums = {1, 1,4, 1, 2, 2,4, 3,4};
-        int[] result = topKFrequent(nums,2);
-        for(int x : result){
-            System.out.print(x+", ");
+        int[] nums = {1, 1, 4, 1, 2, 2, 4, 3, 4};
+        int[] result = topKFrequent(nums, 2);
+        for (int x : result) {
+            System.out.print(x + ", ");
         }
     }
 
@@ -26,20 +26,20 @@ public class TopKFrequent {
             }
         }
 
-        for (Map.Entry<Integer,Integer> mapElement : frequency_map.entrySet()) {
+        for (Map.Entry<Integer, Integer> mapElement : frequency_map.entrySet()) {
             int key = mapElement.getKey();
-            if(bucket[mapElement.getValue()] == null){
+            if (bucket[mapElement.getValue()] == null) {
                 bucket[mapElement.getValue()] = new ArrayList<>();
             }
             bucket[mapElement.getValue()].add(key);
         }
 
         for (int i = bucket.length - 1; i > 0 && index < result.length; i--) {
-            if(bucket[i] == null){
+            if (bucket[i] == null) {
                 continue;
-            }else{
+            } else {
                 int size = bucket[i].size();
-                for(int j=0; j<size && j < k;j++){
+                for (int j = 0; j < size && j < k; j++) {
                     result[index++] = bucket[i].get(j);
                 }
             }

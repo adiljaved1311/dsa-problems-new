@@ -6,7 +6,7 @@ public class TrappingRainWater {
         System.out.println(trap(height));
     }
 
-    public static int trap(int[] height) {
+    public static int trap(int[] height) {  // S -> O(n) and T-> O(n)
         int[] leftArray = new int[height.length];
         int[] rightArray = new int[height.length];
         int trapArea = 0;
@@ -20,7 +20,7 @@ public class TrappingRainWater {
         rightArray[height.length - 1] = 0;
         for (int i = 0; i < height.length; i++) {
             int currentArea = Math.min(leftArray[i], rightArray[i]) - height[i];
-            if(currentArea > 0 ){
+            if (currentArea > 0) {
                 trapArea += currentArea;
             }
         }
@@ -28,7 +28,7 @@ public class TrappingRainWater {
     }
 
     // space -> O(1)
-    public int trap1(int[] heights) {
+    public static int trap1(int[] heights) {
         if (heights.length == 0) return 0;
 
         int l = 0, r = heights.length - 1;
