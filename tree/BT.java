@@ -86,6 +86,7 @@ class BST {
         }
     }
 
+    // If you want to print level wise data, like in first line first level data and in second line second level data and so on
     public void levelOrderTraversal2(Node pos) {
         Queue<Node> q = new LinkedList<>();
         q.add(pos);
@@ -217,15 +218,14 @@ public class BT {
 
     public static void main(String[] args) {
         BST bt = new BST();
-        bt.addNode(4);
-        bt.addNode(3);
-        bt.addNode(5);
-        bt.addNode(2);
-        bt.addNode(1);
+        bt.addNode(9);
+        bt.addNode(8);
         bt.addNode(6);
-        bt.addNode(7);
+        bt.addNode(15);
+        bt.addNode(13);
+        bt.addNode(14);
         //bt.preOrderrecurrsivetraverse(bt.root);
-        //bt.inOrederecurrsivetraverse(bt.root);
+        bt.inOrederecurrsivetraverse(bt.root);
         //bt.postOrderrecurrsivetraverse(bt.root);
         //bt.levelOrderTraversal2(bt.root);
 //		bt.addNode(10);
@@ -258,6 +258,6 @@ public class BT {
         //System.out.println("Height : " + bt.height(bt.root));
 //        List list = bt.rightSideView(bt.root);
 //        System.out.println(list);
-        bt.leftSideView(bt.root);
+        //bt.leftSideView(bt.root);
     }
 }
