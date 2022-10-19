@@ -24,7 +24,7 @@ public class SortByFrequency {
                 mapIndex.put(num, i); //Map to capture 1st occurrence of elements
             }
         }
-        //Comparator interface overriding compare method
+        //Comparator interface overriding compare method by using lambda function
         Collections.sort(list, (n1, n2) -> {
             int freqn1 = mapCount.get(n1);
             int freqn2 = mapCount.get(n2);

@@ -11,7 +11,7 @@ public class HowManySmall {
 
 	public static void main(String[] args) 
 	{
-		int a[] = {8,1,2,2,3};  
+		int a[] = {8,1,2,2,3};  // 1,2,2,3,8
 		int b[] = howmanySmaller1(a);
 		for(int x:b)
 			System.out.print(x+", ");

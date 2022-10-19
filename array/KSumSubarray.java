@@ -11,9 +11,7 @@ public class KSumSubarray {
 	}
 
 	// for finding any SubArray having sum k
-	public static int[] K_sum1(int a[], int k) 
-	// Time -> O(n) &  Space -> O(n)
-	{ 
+	public static int[] K_sum1(int a[], int k) {  // Time -> O(n) &  Space -> O(n)
 		HashMap<Integer, Integer> arr_sum = new HashMap<>();
 		int sum = 0;
 		int result[] = { -1, -1 };

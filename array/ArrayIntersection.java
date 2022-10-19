@@ -14,7 +14,7 @@ import java.util.List;
 
 public class ArrayIntersection {
     public static void main(String[] args) {
-        int arr1[] = {4,9,5};
+        int arr1[] = {4,9,5,9};
         int arr2[] = {9,4,9,8,4};
         int output[] = arrayIntersection(arr1,arr2);
         for(int x : output){
