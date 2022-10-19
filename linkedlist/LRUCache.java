@@ -56,7 +56,7 @@ class LRUCache {
         }
     }
 
-    // remove node from list
+    // remove node from List
     public void remove(Node node) {
         Node prev = node.prev;
         Node next = node.next;
