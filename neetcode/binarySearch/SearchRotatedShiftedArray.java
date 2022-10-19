@@ -5,16 +5,16 @@ public class SearchRotatedShiftedArray {
         int nums[] = {4, 5, 6, 7, 0, 1, 2};
         int target = 0;
         System.out.println(searchRotatedShiftedArray(nums,5));
-    }
+     }
 
     public static int searchRotatedShiftedArray(int[] nums, int target){
         int firstElementIndex = firstElement(nums);
         System.out.println("Minumum -> "+nums[firstElementIndex]);
         if(target == nums[firstElementIndex]){
             return firstElementIndex;
-        }else if(target < nums[0]){ // number should be in right
+        }else if(target < nums[0]){ // target number should be in right
             return binarySearch(nums,firstElementIndex+1,nums.length-1,target);
-        }else{ // number should be in left
+        }else{ // target number should be in left
             return binarySearch(nums,0,firstElementIndex-1,target);
         }
     }
@@ -33,7 +33,7 @@ public class SearchRotatedShiftedArray {
         return -1;
     }
 
-    // find the index of first element
+    // find the index of first element  {4, 5, 6, 7, 0, 1, 2}
     private static int firstElement(int[] nums) {
         int left = 0;
         int right = nums.length - 1;
@@ -41,9 +41,9 @@ public class SearchRotatedShiftedArray {
             int mid = (left + right) / 2;
             if (nums[mid] == 0 || nums[mid] < nums[mid - 1]) {
                 return mid;
-            } else if (nums[mid] > nums[0]) {
+            } else if (nums[mid] > nums[0]) { // first number should be in right half
                 left = mid + 1;
-            } else {
+            } else {  // first number should be in left half
                 right = mid - 1;
             }
         }
